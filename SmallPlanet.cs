@@ -16,45 +16,59 @@ namespace Small_Big_Planet
 
 		private DispatcherTimer timer = new DispatcherTimer();
 
-		private const int speed = 3;
-
-		private Canvas canvas;
+		private const int speed = 1;
 
 		private Ellipse planet;
 
 		private Vector targetPosition;
 
-		private Vector localPosition;
-
 		private Ellipse targetPlanet;
 
-		public SmallPlanet(Ellipse planet, Canvas canvas)
+		public SmallPlanet(Ellipse planet)
 		{
 			this.planet = planet;
-			this.canvas = canvas;
 
-			this.localPosition.X = Canvas.GetLeft(planet);
-			this.localPosition.Y = Canvas.GetTop(planet);
-
-			timer.Interval = new TimeSpan(0, 0, 0, 0, 10);
+			timer.Interval = new TimeSpan(0, 0, 0, 0, 25);
 			timer.Tick += Timer_Tick;
 		}
 
 		private void Timer_Tick(object sender, EventArgs e)
 		{
-			this.localPosition.X = this.localPosition.X > this.targetPosition.X ? this.localPosition.X - speed : this.localPosition.X;
-			this.localPosition.X = this.localPosition.X < this.targetPosition.X ? this.localPosition.X + speed : this.localPosition.X;
-			this.localPosition.Y = this.localPosition.Y > this.targetPosition.Y ? this.localPosition.Y - speed : this.localPosition.Y;
-			this.localPosition.Y = this.localPosition.Y < this.targetPosition.Y ? this.localPosition.Y + speed : this.localPosition.Y;
+			UpdatePosition();
+		}
 
-			Canvas.SetLeft(planet, this.localPosition.X);
-			Canvas.SetTop(planet, this.localPosition.Y);
+		private Vector LocalPosition
+		{
+			get
+			{
+				Vector temp = new Vector();
+				temp.X = Canvas.GetLeft(this.planet) + (this.planet.Width / 2);
+				temp.Y = Canvas.GetTop(this.planet) + (this.planet.Height / 2);
+				return temp;
+			}
+			set
+			{
+				Canvas.SetLeft(this.planet, (value.X - (this.planet.Width / 2)));
+				Canvas.SetTop(this.planet, (value.Y - (this.planet.Height / 2)));
+			}
+		}
+
+		private void UpdatePosition()
+		{
+			Vector temp = new Vector();
+			temp = LocalPosition;
+			temp.X = temp.X > this.targetPosition.X ? temp.X - speed : temp.X;
+			temp.X = temp.X < this.targetPosition.X ? temp.X + speed : temp.X;
+			temp.Y = temp.Y > this.targetPosition.Y ? temp.Y - speed : temp.Y;
+			temp.Y = temp.Y < this.targetPosition.Y ? temp.Y + speed : temp.Y;
+
+			LocalPosition = temp;
 		}
 
 		public void SetTarget(Ellipse targetPlanet)
 		{
-			this.targetPosition.X = Canvas.GetLeft(targetPlanet);
-			this.targetPosition.Y = Canvas.GetTop(targetPlanet);
+			this.targetPosition.X = Canvas.GetLeft(targetPlanet) + (targetPlanet.Width / 2);
+			this.targetPosition.Y = Canvas.GetTop(targetPlanet) + (targetPlanet.Height / 2);
 
 			this.targetPlanet = targetPlanet;
 		}
