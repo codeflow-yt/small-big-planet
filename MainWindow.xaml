@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Small_Big_Planet"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="480" Width="320">
     <Grid>
-        
+        <Canvas x:Name="cnv_Canvas" Background="#FF0C0C0C">
+            <Ellipse x:Name="elp_BigPlanet" Fill="#FF4D4D4D" Height="100" Stroke="#00000000" Width="100" Canvas.Left="107" Canvas.Top="159"/>
+            <Ellipse x:Name="elp_SmallPlanet" Fill="#FFA07272" Height="24" Stroke="#00000000" Width="24" Canvas.Left="247" Canvas.Top="27"/>
+        </Canvas>
+
     </Grid>
 </Window>

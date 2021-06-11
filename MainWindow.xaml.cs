@@ -18,6 +18,9 @@ namespace Small_Big_Planet
 	/// <summary>
 	/// Interaction logic for MainWindow.xaml
 	/// </summary>
+
+	public delegate void Notify();
+
 	public partial class MainWindow : Window
 	{
 		public MainWindow()
