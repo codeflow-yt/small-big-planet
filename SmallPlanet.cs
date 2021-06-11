@@ -36,7 +36,7 @@ namespace Small_Big_Planet
 			this.localPosition.X = Canvas.GetLeft(planet);
 			this.localPosition.Y = Canvas.GetTop(planet);
 
-			timer.Interval = new TimeSpan(0, 0, 0, 0, 250);
+			timer.Interval = new TimeSpan(0, 0, 0, 0, 10);
 			timer.Tick += Timer_Tick;
 		}
 
