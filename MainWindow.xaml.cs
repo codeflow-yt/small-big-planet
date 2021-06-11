@@ -23,9 +23,22 @@ namespace Small_Big_Planet
 
 	public partial class MainWindow : Window
 	{
+		SmallPlanet smallPlanet;
+		BigPlanet bigPlanet;
+
 		public MainWindow()
 		{
 			InitializeComponent();
+		}
+
+		private void Window_Loaded(object sender, RoutedEventArgs e)
+		{
+			smallPlanet = new SmallPlanet(this.elp_SmallPlanet, this.cnv_Canvas);
+			bigPlanet = new BigPlanet(this.elp_BigPlanet, this.cnv_Canvas);
+
+			smallPlanet.SetTarget(this.elp_BigPlanet);
+
+			smallPlanet.Move();
 		}
 	}
 }
