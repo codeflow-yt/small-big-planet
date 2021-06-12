@@ -47,7 +47,7 @@ namespace Small_Big_Planet
 		private void SmallPlanet_OnCollision()
 		{
 			smallPlanet.SetTarget(this.elp_BlackHole);
-			smallPlanet.speed = 2;
+			//smallPlanet.speed = 2;
 		}
 	}
 }

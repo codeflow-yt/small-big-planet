@@ -9,12 +9,12 @@
     <Grid>
         <Canvas x:Name="cnv_Canvas" Background="#FF0C0B0F">
             <Ellipse x:Name="elp_GravityField" Fill="#3FDD3703" Height="220" Stroke="Transparent" Width="220" Canvas.Left="48" Canvas.Top="101"/>
-            <Ellipse x:Name="elp_Bg1" Fill="#BFDD3703" Height="147" Stroke="Transparent" Width="147" Canvas.Left="83" Canvas.Top="135"/>
-            <Ellipse x:Name="elp_Bg2" Fill="#FFFE670C" Height="119" Stroke="#00FC9E0E" Width="118" Canvas.Left="98" Canvas.Top="150"/>
-            <Ellipse x:Name="elp_Bg3" Fill="#FFFEC750" Height="111" Stroke="Transparent" Width="111" Canvas.Left="101" Canvas.Top="154"/>
-            <Ellipse x:Name="elp_BlackHole" Fill="#FF070511" Height="100" Stroke="Transparent" Width="100" Canvas.Left="107" Canvas.Top="159"/>
+            <Ellipse x:Name="elp_Bg1" Fill="#BFDD3703" Height="136" Stroke="Transparent" Width="134" Canvas.Left="92" Canvas.Top="142"/>
+            <Ellipse x:Name="elp_Bg2" Fill="#FFFE670C" Height="110" Stroke="#00FC9E0E" Width="108" Canvas.Left="106" Canvas.Top="156"/>
+            <Ellipse x:Name="elp_Bg3" Fill="#FFFEC750" Height="102" Stroke="Transparent" Width="102" Canvas.Left="108" Canvas.Top="160"/>
+            <Ellipse x:Name="elp_BlackHole" Fill="#FF070511" Height="84" Stroke="Transparent" Width="82" Canvas.Left="118" Canvas.Top="169"/>
             <Ellipse x:Name="elp_SmallPlanet" Fill="#FFCDC3C3" Height="24" Stroke="Transparent" Width="24" Canvas.Left="28" Canvas.Top="10"/>
-            <Ellipse x:Name="elp_Target" Fill="#FF806564" Height="24" Stroke="Transparent" Width="24" Canvas.Left="28" Canvas.Top="474"/>
+            <Ellipse x:Name="elp_Target" Fill="#FF806564" Height="24" Stroke="Transparent" Width="24" Canvas.Left="332" Canvas.Top="203"/>
         </Canvas>
 
     </Grid>
