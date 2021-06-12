@@ -24,7 +24,6 @@ namespace Small_Big_Planet
 	public partial class MainWindow : Window
 	{
 		SmallPlanet smallPlanet;
-		BigPlanet bigPlanet;
 
 		public MainWindow()
 		{
@@ -34,7 +33,6 @@ namespace Small_Big_Planet
 		private void Window_Loaded(object sender, RoutedEventArgs e)
 		{
 			smallPlanet = new SmallPlanet(this.elp_SmallPlanet);
-			bigPlanet = new BigPlanet(this.elp_BlackHole);
 
 			smallPlanet.OnCollision += SmallPlanet_OnCollision;
 
@@ -47,7 +45,6 @@ namespace Small_Big_Planet
 		private void SmallPlanet_OnCollision()
 		{
 			smallPlanet.SetTarget(this.elp_BlackHole);
-			//smallPlanet.speed = 2;
 		}
 	}
 }
