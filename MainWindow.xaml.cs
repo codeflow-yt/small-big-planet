@@ -34,11 +34,20 @@ namespace Small_Big_Planet
 		private void Window_Loaded(object sender, RoutedEventArgs e)
 		{
 			smallPlanet = new SmallPlanet(this.elp_SmallPlanet);
-			bigPlanet = new BigPlanet(this.elp_GravityField);
+			bigPlanet = new BigPlanet(this.elp_BlackHole);
+
+			smallPlanet.OnCollision += SmallPlanet_OnCollision;
 
 			smallPlanet.SetTarget(this.elp_Target);
+			smallPlanet.CheckCollisionWith(this.elp_GravityField);
 
 			smallPlanet.Move();
+		}
+
+		private void SmallPlanet_OnCollision()
+		{
+			smallPlanet.SetTarget(this.elp_BlackHole);
+			smallPlanet.speed = 2;
 		}
 	}
 }

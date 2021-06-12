@@ -52,14 +52,14 @@ namespace Small_Big_Planet
 		private Vector GetPosition(Ellipse ellipse)
 		{
 			Vector temp = new Vector();
-			temp.X = Canvas.GetLeft(this.planet) + (this.planet.Width / 2);
-			temp.Y = Canvas.GetTop(this.planet) + (this.planet.Height / 2);
+			temp.X = Canvas.GetLeft(ellipse) + (ellipse.Width / 2);
+			temp.Y = Canvas.GetTop(ellipse) + (ellipse.Height / 2);
 			return temp;
 		}
 
 		public void CheckCollisionWith(Ellipse target)
 		{
-			this.targetPlanet = planet;
+			this.targetPlanet = target;
 		}
 
 		public void Pull()

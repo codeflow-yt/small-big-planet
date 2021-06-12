@@ -8,13 +8,13 @@
         Title="MainWindow" Height="480" Width="320" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
         <Canvas x:Name="cnv_Canvas" Background="#FF0C0B0F">
-            <Ellipse x:Name="elp_GravityField" Fill="#3FDD3703" Height="202" Stroke="Transparent" Width="202" Canvas.Left="55" Canvas.Top="107"/>
+            <Ellipse x:Name="elp_GravityField" Fill="#3FDD3703" Height="220" Stroke="Transparent" Width="220" Canvas.Left="48" Canvas.Top="101"/>
             <Ellipse x:Name="elp_Bg1" Fill="#BFDD3703" Height="147" Stroke="Transparent" Width="147" Canvas.Left="83" Canvas.Top="135"/>
             <Ellipse x:Name="elp_Bg2" Fill="#FFFE670C" Height="119" Stroke="#00FC9E0E" Width="118" Canvas.Left="98" Canvas.Top="150"/>
             <Ellipse x:Name="elp_Bg3" Fill="#FFFEC750" Height="111" Stroke="Transparent" Width="111" Canvas.Left="101" Canvas.Top="154"/>
             <Ellipse x:Name="elp_BlackHole" Fill="#FF070511" Height="100" Stroke="Transparent" Width="100" Canvas.Left="107" Canvas.Top="159"/>
-            <Ellipse x:Name="elp_SmallPlanet" Fill="#FF806564" Height="24" Stroke="Transparent" Width="24" Canvas.Left="220" Canvas.Top="26"/>
-            <Ellipse x:Name="elp_Target" Fill="#FF806564" Height="24" Stroke="Transparent" Width="24" Canvas.Left="220" Canvas.Top="496"/>
+            <Ellipse x:Name="elp_SmallPlanet" Fill="#FFCDC3C3" Height="24" Stroke="Transparent" Width="24" Canvas.Left="28" Canvas.Top="10"/>
+            <Ellipse x:Name="elp_Target" Fill="#FF806564" Height="24" Stroke="Transparent" Width="24" Canvas.Left="28" Canvas.Top="474"/>
         </Canvas>
 
     </Grid>
